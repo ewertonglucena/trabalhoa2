@@ -37,8 +37,8 @@ public class Motor {
         this.tipoCombustivel = tipoCombustivel;
     }
     public void setRpm(int rpm){
-        if (rpm <= 0){
-            throw new IllegalArgumentException("Não são permitidos zero e números negativos.");
+        if (rpm < 0){
+            throw new IllegalArgumentException("Não são permitidos números negativos.");
         }
         this.rpm = rpm;
     }
