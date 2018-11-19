@@ -38,4 +38,14 @@ public class Carro extends Veiculo {
     public Carro(String proprietario , String marca, String placa){
         super(proprietario, marca , placa); 
     }
+    public Carro(int numeroPassageiros , double preco){
+        super(numeroPassageiros, preco);
+    }
+    public Carro(int numeroPassageiros , Motor motor , int volumeMala){
+        super(numeroPassageiros, motor);
+        this.setVolumeMala(volumeMala);
+    }
+    public Carro(int numeroPassageiros, String marca , Motor motor, String placa, double preco, String proprietario){
+        super(numeroPassageiros , marca, motor , placa , preco, proprietario);
+    }
 }
