@@ -155,7 +155,7 @@ public abstract class Veiculo implements preRequisitos {
         System.out.println("Número de Passageiros: "+getNumeroPassageiros());
         System.out.println("Preço: R$"+getPreco());
         System.out.println("Tempo Máximo de Uso: "+TEMPOMAXUSO);
-        System.out.println("Idade Mínima do Motorista: "+IDADEMINIMAMOTORISTA);
+        System.out.println("Idade Mínima do Motorista: "+IDADEMINIMAMOTORISTA+" anos.");
         motor.imprimir();
     }
     
