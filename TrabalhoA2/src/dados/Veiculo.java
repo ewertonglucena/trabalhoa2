@@ -17,6 +17,50 @@ public abstract class Veiculo implements preRequisitos {
    
    Motor motor = new Motor();
    
+   public Veiculo(){
+        
+    }
+    public Veiculo(String proprietario, String marca, String placa,int numeroPassageiros, double preco, Motor motor){
+        this.setProprietario(proprietario);
+        this.setMarca(marca);
+        this.setPlaca(placa);
+        this.setNumeroPassageiros(numeroPassageiros);
+        this.setPreco(preco);
+        this.setMotor(motor);
+    }
+    public Veiculo(String proprietario, String marca, String placa){
+        this.setProprietario(proprietario);
+        this.setMarca(marca);
+        this.setPlaca(placa);
+    }
+    public Veiculo(int numeroPassageiros , Motor motor){
+        this.setNumeroPassageiros(numeroPassageiros);
+        this.setMotor(motor);
+    }
+    public Veiculo(int numeroPasageiros, double preco){
+        this.setNumeroPassageiros(numeroPassageiros);
+        this.setPreco(preco);
+    }
+    public Veiculo(String marca, int numeroPassageiros , double preco){
+        this.setMarca(marca);
+        this.setNumeroPassageiros(numeroPassageiros);
+        this.setPreco(preco);
+    }
+    public Veiculo(double preco, String proprietario, int numeroPassageiros){
+        this.setPreco(preco);
+        this.setProprietario(proprietario);
+        this.setNumeroPassageiros(numeroPassageiros);
+    }
+    public Veiculo(int numeroPassageiros, String marca ,Motor motor, String placa ,double preco, String proprietario){
+        this.setNumeroPassageiros(numeroPassageiros);
+        this.setMarca(marca);
+        this.setMotor(motor);
+        this.setPlaca(placa);
+        this.setPreco(preco);
+        this.setProprietario(proprietario);
+        
+    }
+   
    public void setProprietario(String proprietario){
        this.proprietario = proprietario;
     }
@@ -65,7 +109,7 @@ public abstract class Veiculo implements preRequisitos {
        return this.nomeVeiculo;
     }
    
-   public void setMotor(){
+   public void setMotor(Motor motor){
        this.motor = motor;
    }
    
