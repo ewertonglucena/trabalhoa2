@@ -12,6 +12,12 @@ package dados;
 public interface preRequisitos {
    int TEMPOMAXUSO = 30;
    int IDADEMINIMAMOTORISTA = 18;
+   int CARRORPM = 100;
+   int MOTORPM = 200;
+   int ONIBUSRPM = 50;
+   String CARRO = "Carro";
+   String MOTO = "Moto";
+   String ONIBUS = "Ônibus";
    
    void acelerar();
    void desacelerar();
