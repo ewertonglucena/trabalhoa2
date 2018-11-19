@@ -15,7 +15,7 @@ public abstract class Veiculo implements preRequisitos {
    protected String nomeVeiculo;
    protected int rpmVeiculo;
    
-   Motor motor1 = new Motor();
+   Motor motor = new Motor();
    
    public void setProprietario(String proprietario){
        this.proprietario = proprietario;
@@ -64,23 +64,31 @@ public abstract class Veiculo implements preRequisitos {
    public String getNomeVeiculo(){
        return this.nomeVeiculo;
     }
+   
+   public void setMotor(){
+       this.motor = motor;
+   }
+   
+   public Motor getMotor(){
+       return this.motor;
+   }
     
    public void acelerar(){
        int novaRpm;
-       novaRpm = motor1.getRpm()+rpmVeiculo;
-       if(novaRpm > motor1.getRpmMaximo()){
-           novaRpm = motor1.getRpmMaximo();
+       novaRpm = motor.getRpm()+rpmVeiculo;
+       if(novaRpm > motor.getRpmMaximo()){
+           novaRpm = motor.getRpmMaximo();
        }
-       motor1.setRpm(novaRpm);
+       motor.setRpm(novaRpm);
     }
     
    public void desacelerar(){
        int novaRpm;
-       novaRpm = motor1.getRpm()-rpmVeiculo;
+       novaRpm = motor.getRpm()-rpmVeiculo;
        if(novaRpm<0){
            novaRpm = 0;
        }
-       motor1.setRpm(novaRpm);
+       motor.setRpm(novaRpm);
     }
     
    public void frear(){
@@ -104,7 +112,7 @@ public abstract class Veiculo implements preRequisitos {
         System.out.println("Preço: R$"+getPreco());
         System.out.println("Tempo Máximo de Uso: "+TEMPOMAXUSO);
         System.out.println("Idade Mínima do Motorista: "+IDADEMINIMAMOTORISTA);
-        motor1.imprimir();
+        motor.imprimir();
     }
     
     public void entradaDados(){
