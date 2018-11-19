@@ -65,13 +65,19 @@ public abstract class Veiculo implements preRequisitos {
     
    public void acelerar(){
        int novaRpm;
-       novaRpm = motor1.getRpm()+ rpmVeiculo; 
+       novaRpm = motor1.getRpm()+rpmVeiculo;
+       if(novaRpm > motor1.getRpmMaximo()){
+           novaRpm = motor1.getRpmMaximo();
+       }
        motor1.setRpm(novaRpm);
     }
     
    public void desacelerar(){
        int novaRpm;
-       novaRpm = motor1.getRpm()- rpmVeiculo; 
+       novaRpm = motor1.getRpm()-rpmVeiculo;
+       if(novaRpm<0){
+           novaRpm = 0;
+       }
        motor1.setRpm(novaRpm);
     }
     
@@ -79,12 +85,17 @@ public abstract class Veiculo implements preRequisitos {
         System.out.println(getNomeVeiculo()+" freando");
     }
     
-   public void virarDireita(){
+    public void virarDireita(){
         System.out.println(getNomeVeiculo()+" virando a direita");
     }
     
-   public void virarEsquerda(){
+    public void virarEsquerda(){
         System.out.println(getNomeVeiculo()+" virando a esquerda");
     }
     
+    public void imprimir(){
+        System.out.println("\nDados do "+getNomeVeiculo());
+        System.out.println("Proprietário: "+getProprietario());
+        System.out.println("");
+    }
 }
