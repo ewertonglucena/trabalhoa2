@@ -9,6 +9,7 @@ public class TrabalhoA2 {
         
         Carro c1 = new Carro();
         c1.frear();
+        c1.entradaDados();
     }
     
 }

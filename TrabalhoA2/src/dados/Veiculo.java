@@ -1,5 +1,7 @@
 package dados;
 
+import java.util.Scanner;
+
 /**
  *
  * @author 20152104805
@@ -15,7 +17,7 @@ public abstract class Veiculo implements preRequisitos {
    
    Motor motor1 = new Motor();
    
-   public void setProrietario(String proprietario){
+   public void setProprietario(String proprietario){
        this.proprietario = proprietario;
     }
    
@@ -96,6 +98,58 @@ public abstract class Veiculo implements preRequisitos {
     public void imprimir(){
         System.out.println("\nDados do "+getNomeVeiculo());
         System.out.println("Proprietário: "+getProprietario());
-        System.out.println("");
+        System.out.println("Marca: "+getMarca());
+        System.out.println("Placa: "+getMarca());
+        System.out.println("Número de Passageiros: "+getNumeroPassageiros());
+        System.out.println("Preço: R$"+getPreco());
+        System.out.println("Tempo Máximo de Uso: "+TEMPOMAXUSO);
+        System.out.println("Idade Mínima do Motorista: "+IDADEMINIMAMOTORISTA);
+        motor1.imprimir();
+    }
+    
+    public void entradaDados(){
+        Scanner sc = new Scanner(System.in);
+        boolean entradaValida = true;
+        System.out.println("\nDados do "+getNomeVeiculo());
+        do{
+            try{
+                System.out.print("Insira o nome do Proprietário: ");
+                setProprietario(sc.nextLine());
+                entradaValida = false;
+            }
+            catch(IllegalArgumentException e){
+                System.out.println("Campos vazios não são permitidos!");
+                System.out.println("Digite um nome de proprietário válido.");
+            }
+        }while(entradaValida);
+        entradaValida = true;
+        do{
+            try{
+                System.out.print("Insira a Marca");
+                setMarca(sc.nextLine());
+                entradaValida = false;
+            }
+            catch(IllegalArgumentException e){
+                System.out.println("Campos vazios não são permitidos!");
+                System.out.println("Digite uma marca válida.");
+            }
+        }while(entradaValida);
+        entradaValida = true;
+        do{
+            try{
+                System.out.print("Insira a Placa: ");
+                setPlaca(sc.nextLine());
+                entradaValida = false;
+            }
+            catch(IllegalArgumentException e){
+                System.out.println("Campos vazios não são permitidos!");
+                System.out.println("Digite uma placa válida.");
+            }
+        }while(entradaValida);
+        entradaValida = true;
+    }
+    
+    public void validarPlaca(){
+        
     }
 }
