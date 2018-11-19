@@ -17,10 +17,9 @@ public abstract class Veiculo implements preRequisitos {
    
    Motor motor = new Motor();
    
-   public Veiculo(){
-        
-    }
-    public Veiculo(String proprietario, String marca, String placa,int numeroPassageiros, double preco, Motor motor){
+   public Veiculo(){}
+   
+   public Veiculo(String proprietario, String marca, String placa,int numeroPassageiros, double preco, Motor motor){
         this.setProprietario(proprietario);
         this.setMarca(marca);
         this.setPlaca(placa);
@@ -62,6 +61,15 @@ public abstract class Veiculo implements preRequisitos {
     }
    
    public void setProprietario(String proprietario){
+       if ("".equals(proprietario)){
+            throw new IllegalArgumentException("Não insira campos vazios.");
+        }
+       if(" ".equals(proprietario)){
+            throw new IllegalArgumentException("Não insira espaços");
+       }
+       if(proprietario == null){
+           throw new IllegalArgumentException("Não são permitidos valores nulos");
+       }
        this.proprietario = proprietario;
     }
    
