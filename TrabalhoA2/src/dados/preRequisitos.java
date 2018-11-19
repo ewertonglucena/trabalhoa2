@@ -13,4 +13,10 @@ public interface preRequisitos {
    int TEMPOMAXUSO = 30;
    int IDADEMINIMAMOTORISTA = 18;
    
+   void acelerar();
+   void desacelerar();
+   void frear();
+   void virarDireita();
+   void virarEsquerda();
+   
 }
