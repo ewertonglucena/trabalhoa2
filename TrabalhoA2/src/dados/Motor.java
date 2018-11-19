@@ -77,6 +77,13 @@ public class Motor {
         System.out.println("Tipo de Combustível: "+getTipoCombustivel());
     }
     
+    public void cadastrar(String marca, String tipoCombustivel, int rpm, int rpmMaximo){
+        setMarca(marca);
+        setTipoCombustivel(tipoCombustivel);
+        setRpm(rpm);
+        setRpmMaximo(rpmMaximo);
+    }
+    
     public void entradaDados(){
         Scanner sc = new Scanner(System.in);
         boolean entradaValida = true;
