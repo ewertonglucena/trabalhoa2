@@ -209,6 +209,15 @@ public abstract class Veiculo implements preRequisitos {
     }
     
     public void validarPlaca(){
-        
     }
+    
+    public void cadastrar(String proprietario, String marca, String placa,int numeroPassageiros, double preco, Motor motor){
+        this.setProprietario(proprietario);
+        this.setMarca(marca);
+        this.setPlaca(placa);
+        this.setNumeroPassageiros(numeroPassageiros);
+        this.setPreco(preco);
+        this.setMotor(motor);
+    }
+    
 }
