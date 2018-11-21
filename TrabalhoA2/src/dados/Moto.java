@@ -1,6 +1,8 @@
 
 package dados;
 
+import java.util.Scanner;
+
 public class Moto extends Veiculo {
     private int volumeBagageiro;
     
@@ -81,5 +83,28 @@ public class Moto extends Veiculo {
         super.rpmVeiculo = MOTORPM;
     }
     
+    public void cadastrar(String proprietario, String marca, String placa,int numeroPassageiros, double preco, Motor motor){
+        super.cadastrar(proprietario, marca, placa, numeroPassageiros, preco, motor);
+        this.setVolumeBagageiro(volumeBagageiro);
+        super.nomeVeiculo = MOTO;
+        super.rpmVeiculo = MOTORPM;
+    }
     
+    public void entradaDados(){
+        Scanner sc = new Scanner(System.in);
+        super.entradaDados();
+        boolean entradaValida = false;
+        do{
+            try{
+                System.out.print("Insira o Volume do Bagageiro: ");
+                setVolumeBagageiro(Integer.parseInt(volumeBagageiro));
+                entradaValida = true;
+            }
+            catch(NumberFormatException e){
+                System.out.println("Erro: "+e.getMessage());
+                System.out.println("Digite apenas números inteiros");
+            }
+            catch(Ilegal)
+        }while(entradaValida);
+    }
 }
