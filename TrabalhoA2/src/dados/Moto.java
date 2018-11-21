@@ -97,14 +97,16 @@ public class Moto extends Veiculo {
         do{
             try{
                 System.out.print("Insira o Volume do Bagageiro: ");
-                setVolumeBagageiro(Integer.parseInt(volumeBagageiro));
+                setVolumeBagageiro(Integer.parseInt(sc.nextLine()));
                 entradaValida = true;
             }
             catch(NumberFormatException e){
                 System.out.println("Erro: "+e.getMessage());
                 System.out.println("Digite apenas números inteiros");
             }
-            catch(Ilegal)
+            catch(IllegalArgumentException e){
+                System.out.println("Erro: "+e.getMessage());
+            }
         }while(entradaValida);
     }
 }
