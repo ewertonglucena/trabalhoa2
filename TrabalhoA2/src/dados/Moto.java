@@ -104,10 +104,16 @@ public class Moto extends Veiculo {
                 System.out.println("Erro: "+e.getMessage());
                 System.out.println("Digite apenas números inteiros");
             }
-            catch(IllegalArgumentException e){
+            catch(IllegalArgumentException e ){
                 System.out.println("Erro: "+e.getMessage());
+                System.out.println("Não são permitidos números negativos");
             }
         }while(entradaValida);
+    }
+    
+    public void imprimir(){
+        super.imprimir();
+        System.out.println("Volume do Bagageiro: "+getVolumeBagageiro());
     }
     
 }
