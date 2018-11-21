@@ -7,9 +7,8 @@ import dados.*;
 public class TrabalhoA2 {
     public static void main(String[] args) {
         
-        Carro c1 = new Carro();
-        c1.frear();
-        c1.entradaDados();
+        Moto m1 = new Moto();
+        m1.entradaDados();
     }
     
 }
