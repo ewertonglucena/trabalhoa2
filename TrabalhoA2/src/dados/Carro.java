@@ -1,5 +1,5 @@
 package dados;
-
+import java.util.Scanner;
 /**
  *
  * @author ewerton.lucena
@@ -8,6 +8,9 @@ public class Carro extends Veiculo {
     private int volumeMala;
 
     public void setVolumeMala(int volumeMala){
+        if(volumeMala <0){
+            throw new IllegalArgumentException("Não são permitidos valores negativos");
+        }
         this.volumeMala = volumeMala;
     }
     public int getVolumeMala(){
@@ -74,7 +77,32 @@ public class Carro extends Veiculo {
     public Carro(String marca ,int numeroPassageiros,double preco, int volumeMala){
         super(marca ,numeroPassageiros,preco);
         this.setVolumeMala(volumeMala);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
+    }
+    public void cadastrar(String proprietario , String marca , String placa ,int numeroPassageiros , double preco ,Motor motor, int volumeMala){
+        super.cadastrar(proprietario, marca, placa, numeroPassageiros, preco, motor);
+        this.setVolumeMala(volumeMala);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
+    }
+    public void entradaDados(){
+        Scanner sc = new Scanner(System.in);
+        super.entradaDados();
+        boolean entradaValida = false ;
+        do{
+            try{
+                System.out.print("Insira o Volume da Mala :");
+                setVolumeMala(Integer.parseInt(sc.nextLine()));
+                entradaValida = true;
+            }catch(NumberFormatException e){
+                System.out.println("Erro :"+e.getMessage());
+                System.out.println("Digite apenas números inteiros");
+            }
+           
+        } while(entradaValida);
+    }
+    public void imprimir(){
         
     }
-    
 }
