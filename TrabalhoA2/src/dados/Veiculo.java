@@ -56,7 +56,7 @@ public abstract class Veiculo implements preRequisitos {
         this.setMotor(motor);
         this.setPlaca(placa);
         this.setPreco(preco);
-        this.setProprietario(proprietario);   
+        this.setProprietario(proprietario);  
     }
    
    public void setProprietario(String proprietario){

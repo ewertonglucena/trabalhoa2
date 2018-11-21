@@ -15,7 +15,6 @@ public class Carro extends Veiculo {
     }
 
     public Carro() {
-        super();
         super.nomeVeiculo = CARRO;
         super.rpmVeiculo = CARRORPM;
     }
@@ -24,28 +23,58 @@ public class Carro extends Veiculo {
             Motor motor, int volumeMala){
         super(proprietario, marca, placa, numeroPassageiros, preco, motor);
         this.setVolumeMala(volumeMala);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
     }
     public Carro(int volumeMala){
         this.setVolumeMala(volumeMala);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
     }
     public Carro(String proprietario,String marca,String placa, int volumeMala){
         super(proprietario, marca, placa);
         this.setVolumeMala(volumeMala);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
     }
     public Carro(int numeroPassageiros, double preco , int volumeMala){
         super(numeroPassageiros, preco);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
     }
     public Carro(String proprietario , String marca, String placa){
-        super(proprietario, marca , placa); 
+        super(proprietario, marca , placa);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
     }
     public Carro(int numeroPassageiros , double preco){
         super(numeroPassageiros, preco);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
     }
     public Carro(int numeroPassageiros , Motor motor , int volumeMala){
         super(numeroPassageiros, motor);
         this.setVolumeMala(volumeMala);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
     }
+    
     public Carro(int numeroPassageiros, String marca , Motor motor, String placa, double preco, String proprietario){
         super(numeroPassageiros , marca, motor , placa , preco, proprietario);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
     }
+
+    public Carro(double preco ,String proprietario, int numeroPassageiros , int volumeMala) {
+        super(preco,proprietario, numeroPassageiros);
+        this.setVolumeMala(volumeMala);
+        super.nomeVeiculo = CARRO;
+        super.rpmVeiculo = CARRORPM;
+    }
+    public Carro(String marca ,int numeroPassageiros,double preco, int volumeMala){
+        super(marca ,numeroPassageiros,preco);
+        this.setVolumeMala(volumeMala);
+        
+    }
+    
 }
