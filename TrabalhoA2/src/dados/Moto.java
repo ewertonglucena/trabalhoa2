@@ -116,6 +116,4 @@ public class Moto extends Veiculo {
         System.out.println("Volume do Bagageiro: "+getVolumeBagageiro());
     }
     
-    
-    
 }
