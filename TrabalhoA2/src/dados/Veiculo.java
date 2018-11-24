@@ -105,7 +105,10 @@ public abstract class Veiculo implements preRequisitos {
         this.numeroPassageiros = numeroPassageiros;
     }
     
-   public void setPreco(double preco){
+   public void setPreco(double preco){       
+       if(preco < 0){
+           throw new IllegalArgumentException("Não insira números negativos");
+       }
         this.preco = preco;
     }
     
@@ -260,8 +263,6 @@ public abstract class Veiculo implements preRequisitos {
         }while(entradaValida);
     }
     
-    public void validarPlaca(){
-    }
     
     public void cadastrar(String proprietario, String marca, String placa,int numeroPassageiros, double preco, Motor motor){
         this.setProprietario(proprietario);
