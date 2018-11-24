@@ -174,7 +174,9 @@ public abstract class Veiculo implements preRequisitos {
        }
        motor.setRpm(novaRpm);
     }
-    
+    public void rpmAtual(){
+        System.out.println("RPM ATUAL : "+motor.getRpm());
+    } 
    public void frear(){
         System.out.println(getNomeVeiculo()+" freando");
     }
@@ -202,7 +204,7 @@ public abstract class Veiculo implements preRequisitos {
     public void entradaDados(){
         Scanner sc = new Scanner(System.in);
         boolean entradaValida = true;
-        System.out.println("\nDados do "+getNomeVeiculo());
+        System.out.println("\nDados do(a) "+getNomeVeiculo());
         do{
             try{
                 System.out.print("Insira o nome do Proprietário: ");
@@ -217,7 +219,7 @@ public abstract class Veiculo implements preRequisitos {
         entradaValida = true;
         do{
             try{
-                System.out.print("Insira a Marca");
+                System.out.print("Insira a Marca: ");
                 setMarca(sc.nextLine());
                 entradaValida = false;
             }
@@ -270,6 +272,7 @@ public abstract class Veiculo implements preRequisitos {
                 System.out.println("Digite um preço válido!");
             }
         }while(entradaValida);
+        motor.entradaDados();
     }
     
     public void cadastrar(String proprietario, String marca, String placa,int numeroPassageiros, double preco, Motor motor){

@@ -9,6 +9,10 @@ public class TrabalhoA2 {
         
         Moto m1 = new Moto();
         m1.entradaDados();
+        m1.acelerar();
+        m1.rpmAtual();
+        m1.desacelerar();
+        m1.rpmAtual();
     }
     
 }
