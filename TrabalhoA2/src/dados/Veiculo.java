@@ -132,7 +132,16 @@ public abstract class Veiculo implements preRequisitos {
         return this.preco;
     }
     
-   public void setNomeVeiculo(){
+   public void setNomeVeiculo(String nomeVeiculo){
+       if ("".equals(nomeVeiculo)){
+            throw new IllegalArgumentException("Não insira campos vazios.");
+        }
+       if(" ".equals(nomeVeiculo)){
+            throw new IllegalArgumentException("Não insira espaços");
+       }
+       if(nomeVeiculo == null){
+           throw new IllegalArgumentException("Não são permitidos valores nulos");
+       }
         this.nomeVeiculo = nomeVeiculo;
     }
     
