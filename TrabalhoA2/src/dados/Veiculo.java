@@ -105,7 +105,10 @@ public abstract class Veiculo implements preRequisitos {
         this.numeroPassageiros = numeroPassageiros;
     }
     
-   public void setPreco(double preco){
+   public void setPreco(double preco){       
+       if(preco < 0){
+           throw new IllegalArgumentException("Não insira números negativos");
+       }
         this.preco = preco;
     }
     
