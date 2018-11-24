@@ -99,7 +99,10 @@ public class Carro extends Veiculo {
                 System.out.println("Erro :"+e.getMessage());
                 System.out.println("Digite apenas números inteiros");
             }
-           
+            catch(IllegalArgumentException e){
+                System.out.println("Erro: "+e.getMessage());
+                System.out.println("Digite apenas volume de mala válido!");
+            }
         } while(entradaValida);
     }
     public void imprimir(){
