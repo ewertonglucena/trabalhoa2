@@ -106,7 +106,4 @@ public class Onibus extends Veiculo {
         System.out.println("Motorista: "+getMotorista());
     }
     
-    public void cadastrar(String proprietario, String marca, String placa, int numeroPassageiros, double preco, Motor motor){
-        super.cadastrar(proprietario, marca, placa, numeroPassageiros, preco, motor);
-    }
 }
