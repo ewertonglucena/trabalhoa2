@@ -272,7 +272,6 @@ public abstract class Veiculo implements preRequisitos {
         }while(entradaValida);
     }
     
-    
     public void cadastrar(String proprietario, String marca, String placa,int numeroPassageiros, double preco, Motor motor){
         this.setProprietario(proprietario);
         this.setMarca(marca);
