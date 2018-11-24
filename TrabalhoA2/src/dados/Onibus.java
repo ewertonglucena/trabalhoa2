@@ -83,6 +83,7 @@ public class Onibus extends Veiculo {
         super.nomeVeiculo = ONIBUS;
         super.rpmVeiculo = ONIBUSRPM;
     }
+    
     public void entradaDados(){
         Scanner sc = new Scanner(System.in);
         super.entradaDados();
@@ -98,5 +99,14 @@ public class Onibus extends Veiculo {
                 System.out.println("Valor inválido!");
             }
         }while(entradaValida);
+    }
+    
+    public void imprimir(){
+        super.imprimir();
+        System.out.println("Motorista: "+getMotorista());
+    }
+    
+    public void cadastrar(String proprietario, String marca, String placa, int numeroPassageiros, double preco, Motor motor){
+        super.cadastrar(proprietario, marca, placa, numeroPassageiros, preco, motor);
     }
 }
