@@ -73,14 +73,35 @@ public abstract class Veiculo implements preRequisitos {
     }
    
    public void setMarca(String marca){
+       if ("".equals(marca)){
+            throw new IllegalArgumentException("Não insira campos vazios.");
+        }
+       if(" ".equals(marca)){
+            throw new IllegalArgumentException("Não insira espaços");
+       }
+       if(marca == null){
+           throw new IllegalArgumentException("Não são permitidos valores nulos");
+       }
        this.marca = marca;
     }
       
    public void setPlaca(String placa){
+       if ("".equals(placa)){
+            throw new IllegalArgumentException("Não insira campos vazios.");
+        }
+       if(" ".equals(placa)){
+            throw new IllegalArgumentException("Não insira espaços");
+       }
+       if(placa == null){
+           throw new IllegalArgumentException("Não são permitidos valores nulos");
+       }
         this.placa = placa;
     }
     
    public void setNumeroPassageiros(int numeroPassageiros){
+       if(numeroPassageiros < 0){
+           throw new IllegalArgumentException("Não insira números negativos");
+       }
         this.numeroPassageiros = numeroPassageiros;
     }
     

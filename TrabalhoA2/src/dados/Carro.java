@@ -103,6 +103,7 @@ public class Carro extends Veiculo {
         } while(entradaValida);
     }
     public void imprimir(){
-        
+        super.imprimir();
+        System.out.println("Volume da Mala: "+getVolumeMala());
     }
 }
