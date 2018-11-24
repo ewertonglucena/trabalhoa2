@@ -270,6 +270,5 @@ public abstract class Veiculo implements preRequisitos {
         this.setNumeroPassageiros(numeroPassageiros);
         this.setPreco(preco);
         this.setMotor(motor);
-    }
-    
+    }  
 }
