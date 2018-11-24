@@ -179,7 +179,7 @@ public abstract class Veiculo implements preRequisitos {
         System.out.println("\nDados do "+getNomeVeiculo());
         System.out.println("Proprietário: "+getProprietario());
         System.out.println("Marca: "+getMarca());
-        System.out.println("Placa: "+getMarca());
+        System.out.println("Placa: "+getPlaca());
         System.out.println("Número de Passageiros: "+getNumeroPassageiros());
         System.out.println("Preço: R$"+getPreco());
         System.out.println("Tempo Máximo de Uso: "+TEMPOMAXUSO);
@@ -227,6 +227,37 @@ public abstract class Veiculo implements preRequisitos {
             }
         }while(entradaValida);
         entradaValida = true;
+        do{
+            try{
+                System.out.print("Insira o Número de Passageiros: ");
+                setNumeroPassageiros(Integer.parseInt(sc.nextLine()));
+                entradaValida = false;
+            }
+            catch(NumberFormatException e ){
+                System.out.println("Erro: "+e.getMessage());
+                System.out.println("Digite somente números inteiros!");
+            }
+            catch(IllegalArgumentException e){
+                System.out.println("Erro: "+e.getMessage());
+                System.out.println("Digite uma quantidade de passageiros válida!");
+            }
+        }while(entradaValida);
+        entradaValida = true;
+        do{
+            try{
+                System.out.print("Insira o preço: R$");
+                setPreco(Double.parseDouble(sc.nextLine()));
+                entradaValida = false;
+            }
+            catch(NumberFormatException e){
+                System.out.println("Erro: "+e.getMessage());
+                System.out.println("Digite somente valores reais positivos!");
+            }
+            catch(IllegalArgumentException e){
+                System.out.println("Erro: "+e.getMessage());
+                System.out.println("Digite um preço válido!");
+            }
+        }while(entradaValida);
     }
     
     public void validarPlaca(){
