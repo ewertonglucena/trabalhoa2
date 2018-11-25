@@ -89,12 +89,12 @@ public class Carro extends Veiculo {
     public void entradaDados(){
         Scanner sc = new Scanner(System.in);
         super.entradaDados();
-        boolean entradaValida = false ;
+        boolean entradaValida = true ;
         do{
             try{
                 System.out.print("Insira o Volume da Mala :");
                 setVolumeMala(Integer.parseInt(sc.nextLine()));
-                entradaValida = true;
+                entradaValida = false;
             }catch(NumberFormatException e){
                 System.out.println("Erro :"+e.getMessage());
                 System.out.println("Digite apenas números inteiros");

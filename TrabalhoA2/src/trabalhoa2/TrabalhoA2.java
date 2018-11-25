@@ -1,4 +1,5 @@
 package trabalhoa2;
+import java.util.Scanner;
 import dados.*;
 /**
  *
@@ -6,13 +7,14 @@ import dados.*;
  */
 public class TrabalhoA2 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int op = 10;
+        Carro car[] = new Carro[op];
+        Moto m1[] = new Moto[op];
+        Onibus o1[] = new Onibus[op];
         
-        Carro car[] = new Carro[10];
-        Moto m1[] = new Moto[10];
-        Onibus o1[] = new Onibus[10];
-        
-    for(int i = 0; i<car.length; i++){
-        Carro car[i] = new Carro();
+    for(int i = 0; i<op; i++){
+        car[i] = new Carro();
         car[i].entradaDados();
         car[i].imprimir();
         car[i].acelerar();
@@ -23,7 +25,10 @@ public class TrabalhoA2 {
         car[i].virarDireita();
         car[i].virarEsquerda();
         
+        m1[i] = new Moto();
         m1[i].entradaDados();
+        
+        o1[i] = new Onibus();
         o1[i].entradaDados();
     }
     }    
