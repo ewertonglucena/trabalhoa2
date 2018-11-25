@@ -6,13 +6,13 @@ import dados.*;
  */
 public class TrabalhoA2 {
     public static void main(String[] args) {
+        int j =10;
+        Carro car[] = new Carro[j];
+        Moto m1[] = new Moto[j];
+        Onibus o1[] = new Onibus[j];
         
-        Carro car[] = new Carro[10];
-        Moto m1[] = new Moto[10];
-        Onibus o1[] = new Onibus[10];
-        
-    for(int i = 0; i<car.length; i++){
-        Carro car[i] = new Carro();
+    for(int i = 0; i<j; i++){
+        car[i] = new Carro();
         car[i].entradaDados();
         car[i].imprimir();
         car[i].acelerar();
