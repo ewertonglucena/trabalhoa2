@@ -164,6 +164,7 @@ public abstract class Veiculo implements preRequisitos {
            novaRpm = motor.getRpmMaximo();
        }
        motor.setRpm(novaRpm);
+       System.out.println("Acelerando...");
     }
     
    public void desacelerar(){
@@ -173,6 +174,7 @@ public abstract class Veiculo implements preRequisitos {
            novaRpm = 0;
        }
        motor.setRpm(novaRpm);
+       System.out.println("Desacelerando...");
     }
     public void rpmAtual(){
         System.out.println("RPM ATUAL : "+motor.getRpm());
